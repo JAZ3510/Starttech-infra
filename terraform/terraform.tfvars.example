@@ -1,0 +1,13 @@
+aws_region         = "us-east-1"
+environment        = "production"
+availability_zones = ["us-east-1a", "us-east-1b"]
+cluster_name       = "starttech-cluster"
+cluster_version    = "1.34"
+
+# ARN of the IAM user/role the application GitHub Actions pipeline authenticates as
+eks_admin_principal_arns = [
+  # "arn:aws:iam::123456789012:user/github-actions-deployer"
+]
+
+# Fill in AFTER the backend ingress has created the ALB (second apply)
+alb_dns_name = "placeholder-alb.example.com"
